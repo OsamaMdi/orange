@@ -1,0 +1,9 @@
+.img{
+    width: 15%;
+    height: 20%;
+    background-image:url(image.webp);
+   right: 10px;
+   position: fixed;
+    background-size:contain ;
+    
+}

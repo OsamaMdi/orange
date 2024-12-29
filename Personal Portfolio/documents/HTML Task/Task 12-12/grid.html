@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .nav {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+
+        }
+
+        .nav .button {
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+            border-radius: 8px;
+        }
+
+        .nav .button i {
+            font-size: 20px;
+            margin-bottom: 5px;
+            padding: 20px;
+        }
+
+        .nav .button:nth-child(1) { background-color: #2196F3; }
+        .nav .button:nth-child(2) { background-color: rgb(68, 124, 68); grid-column: span 2; }
+        .nav .button:nth-child(3) { background-color: #FFC107; }
+        .nav .button:nth-child(4) { background-color: #F44336; }
+        .nav .button:nth-child(5) { background-color: blue; }
+        .nav .button:nth-child(6) { background-color: #F44336; grid-column: span 2; }
+        .nav .button:nth-child(7) { background-color: blue; }
+        .nav .button:nth-child(8) { background-color: #2196F3; }
+        .nav .button:nth-child(9) { background-color: rgb(68, 124, 68); }
+        .nav .button:nth-child(10) { background-color: #FFC107; }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 10px;
+            padding: 10px;
+            height: 70%;
+            box-sizing: border-box;
+        }
+
+        .chart {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 50px);
+        }
+
+        .chart-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .stat-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-card h2 {
+            margin: 5px 0;
+            font-size: 18px;
+        }
+
+        .stat-card p {
+            margin: 0;
+            font-size: 12px;
+        }
+        @media only screen and ( max-width:1000px){ 
+            .nav {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+            }
+            .main-content{
+               display: flex;
+               flex-wrap: wrap;
+            }
+            .container{
+                overflow: scroll;
+            }
+        }
+            @media only screen and ( max-width:500px){ 
+            .nav {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+
+        }
+            .main-content{
+               display: flex;
+               flex-wrap: wrap;
+               width: 100%;
+            }
+            .container{
+                overflow: scroll;
+            }
+            .nav .button:nth-child(2) { background-color: rgb(68, 124, 68);grid-column: span 1; }
+            .nav .button:nth-child(6) { background-color: #F44336; grid-column: span 1;}
+            .main-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 10px;
+            padding: 10px;
+            height: 70%;
+            box-sizing: border-box;
+        }
+        .nav .button i {
+            font-size: 20px;
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation Buttons -->
+        <div class="nav">
+            <div class="button"><i class="fa-solid fa-table-columns"></i> Dashboard</div>
+            <div class="button"><i class="fa-solid fa-chart-line"></i> Charts</div>
+            <div class="button"><i class="fa-solid fa-square"></i> Widgets</div>
+            <div class="button"><i class="fa-solid fa-table-cells-large"></i> Tables</div>
+            <div class="button"><i class="fa-solid fa-up-down-left-right"></i> Full width</div>
+            <div class="button"><i class="fa-brands fa-wpforms"></i> Forms</div>
+            <div class="button"><i class="fa-regular fa-circle-dot"></i> Buttons</div>
+            <div class="button"><i class="fa-solid fa-pen"></i> Elements</div>
+            <div class="button"><i class="fa-solid fa-calendar-check"></i> Calendar</div>
+            <div class="button"><i class="fa-solid fa-triangle-exclamation"></i> Errors</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <div class="chart">
+                <h2>Site Analysis</h2>
+                <p>Overview of Latest Month</p>
+                <div class="chart-content">
+                    <img src="chart.png" alt="Graph Placeholder">
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <i class="fa-solid fa-user"></i>
+                    <h2>2540</h2>
+                    <p>Total Users</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-plus"></i>
+                    <h2>120</h2>
+                    <p>New Users</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <h2>656</h2>
+                    <p>Total Shops</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-tag"></i>
+                    <h2>9540</h2>
+                    <p>Total Orders</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-calendar-days"></i>
+                    <h2>100</h2>
+                    <p>Pending Orders</p>
+                </div>
+                <div class="stat-card">
+                    <i class="fa-solid fa-globe"></i>
+                    <h2>8540</h2>
+                    <p>Online Orders</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

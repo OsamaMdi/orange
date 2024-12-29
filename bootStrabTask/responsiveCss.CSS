@@ -1,0 +1,15 @@
+ ul{
+	list-style: none;
+  
+}
+a{
+	color: black;
+	text-decoration: none;
+}
+.headerbootum{
+	color: black
+
+}
+.nav-item:nth-child(1):hover{
+    color:rgb(103, 147, 37);
+}

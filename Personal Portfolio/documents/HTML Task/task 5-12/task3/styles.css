@@ -1,0 +1,25 @@
+
+div{ 
+  background-color: rgb(252, 252, 252);
+}  
+.pp{
+  border-style:solid; 
+  margin: 20px;
+}
+.aa{
+  border-style: dotted ;
+  margin: 20px;
+}
+.nn{
+  border-style:solid;
+  color: blueviolet;
+  margin: 20px;
+}
+body{
+   background-color: antiquewhite; 
+}
+.aa p{border-style:dotted;
+       border-color: red ;}
+       span{
+  background-color: bisque;
+}

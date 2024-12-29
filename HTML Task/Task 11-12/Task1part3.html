@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Exercise #3-FlexBox</title>
+        <style>
+            
+          .container{
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            
+           }
+           .box{
+              color: white;
+             
+              display: flex;
+              font-size: 50px;
+              justify-content: center;
+              align-items: center;
+              width: 50%;
+        }
+           .box:nth-child(1) {
+            background-color:orange;
+           }
+           .box:nth-child(2) {
+            background-color:blue;
+           }      
+        </style>
+    </head>
+    <body>
+        <div class="container">
+           <div class="box">First Part</div>
+           <div class="box">Second Part</div>
+           
+        </div>
+    </body>
+</html> 

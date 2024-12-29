@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    padding: 20px;
+}
+
+.item {
+    background-color: lightgray;
+    padding: 20px;
+    text-align: center;
+}
+
+.sub {
+    background-color: gray;
+    padding: 10px;
+    text-align: center;
+}
+
+.item-1 {
+    grid-column: span 2; /* Span across two columns */
+    grid-row: span 2; /* Span across two rows */
+}
+
+.item-4 {
+    grid-column: span 2; /* Span across two columns */
+}
+
+.item-5 {
+    grid-column: span 2; /* Span across two columns */
+}
+
+.item-8 {
+    grid-column: span 2; /* Span across two columns */
+}
+
+.item-10 {
+    grid-column: span 2; /* Span across two columns */
+}
+
+.item-11 {
+    grid-column: span 2; /* Span across two columns */
+}

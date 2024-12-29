@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta charset="UTF-8">
+        <title>Exercise #1</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+           body{
+            background-color: azure;
+            margin: 10px;
+            display: flex;
+            flex-direction: row;
+           
+           }
+          .body{
+            background-color: rgb(13, 13, 62);
+            display: flex;
+            flex-direction: row;
+            box-shadow: 0 4px 80px 0;
+            flex-wrap: wrap;
+          }
+          .sectshen1{
+            width: 20vw;
+            height: 100vh;
+            background-color:rgb(31, 31, 73) ;
+            text-align: center;
+          }
+          .menu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction:column ;
+          }
+          .item {
+            width: 95%;
+            height: 40px;
+            padding: 5px;
+            color:darkgrey
+          }
+          .item > p{
+            display: flex; 
+            justify-content: start;
+            align-items: start;
+            margin-left: 20px;
+          }
+          a{
+            color: darkgrey;
+            text-decoration: none;
+          }
+          .menu > h2{
+             color: white;
+          }
+          .item > p > i{
+            margin-right:10px ;
+          }
+          .item:nth-child(2){
+            background-color: rgb(13, 13, 62) ;
+            color: white;
+          }
+          .section5{
+            display: flex;
+            flex-direction: column;
+            margin-top: 30px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: right;
+            margin-right: 100px;
+          }
+          h3{
+            color: white;
+            margin: 30px;
+          }
+          h3 > i{
+            margin-right: 10px;
+          }
+        
+          .itemS2 {
+            display: flex;
+            background-color:rgb(31, 31, 73) ;
+            width: 15vw;
+            height: 15vh;
+            padding: 5px;
+            color:darkgrey;
+            flex-direction:column ;
+            margin-top: 68px;
+            margin-left: 20px;
+            margin-right: 20px;
+          }
+          .itemS2 > span {
+            color: white;
+            font-size: 30px;
+            margin-top: 20px;
+            margin-left: 20px;
+          }
+          .itemS2 > p > i{
+            display: flex;
+            float:right; 
+            margin-right: 20px;
+            font-size: 20px;
+          }
+          .itemS2 > p {
+            margin-left: 20px;
+          }
+          
+          .directshon{
+            display: flex;
+            flex-direction: row;
+          }
+          .part2{
+            display: flex;
+            flex-direction: column;
+          }
+          .section3{
+            background-color:rgb(31, 31, 73) ;
+            width: 43vw;
+            height: 35vh;
+            padding: 10px;
+            margin-top:100px ;
+            margin-left: 20px;
+          }
+          .section3 > .lin1 > p{
+            display: flex;
+            justify-content: center;
+            width: 80px;
+            height: 25px;
+            color: rgb(227, 151, 59);
+            background-color: aliceblue;
+            font-size: 15px;
+            margin-top: 5px;
+          }
+          .section3 > .lin1 > h4 {
+            color: red;
+          }
+          .lin1{
+            display: flex;
+            flex-direction:row ;
+            width: 100%;
+            color:darkgrey;
+            justify-content: space-between;
+          }
+          .para{
+            display:flex ;
+            justify-content: space-between;
+          }
+          .para > p{
+            border-bottom: 1px darkgrey solid ;
+            width: 100vw;
+            margin-top: 20px;
+            color:darkgrey ;
+          }
+          .part3{
+            display: flex;
+            flex-direction: row;
+          }
+          .section4{
+            display: flex;
+            flex-direction: column;
+            background-color:rgb(31, 31, 73) ;
+            width: 23vw;
+            height: 35vh;
+            padding: 10px;
+            margin-top:100px ;
+            margin-left: 30px;
+          }
+          .section4 > .lin1 > p{
+            display: flex;
+            justify-content: center;
+            width: 80px;
+            height: 25px;
+            color: rgb(227, 151, 59);
+            background-color: aliceblue;
+            font-size: 15px;
+            margin-top: 5px;
+          
+          }
+          .section4 > .lin1 > h4 {
+            color: red;
+          }
+          .lin1{
+            display: flex;
+            flex-direction:row ;
+            width: 100%;
+            color:darkgrey;
+            justify-content: space-between;
+          }
+          .img{
+            display:flex ;
+            height: 20vh;
+            margin-top: 40px;
+            margin-left: 50px;
+          }
+          .section5 > p{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            color: white;
+            justify-content: center;
+            margin-top: 10px;
+          }
+
+          .section5 img {
+              border-radius: 50%;
+              width: 50px;
+              height: 50px;
+          }
+          .row{
+            display: flex;
+          flex-direction: row;       
+           }
+           .colum{
+            display: flex;
+            flex-direction: column;
+           }
+        </style>
+    </head>
+    <body>
+        <div class="body">
+          <div class="row">
+            <div class="sectshen1">
+              <div class="menu">
+                 <h2 > <span style="color:rgb(182, 19, 19);">M</span>-SoftTech</h2> 
+                  <div class="item">
+                   <p><i class="fa-solid fa-gauge"></i>
+                     <a href=""> Dashboard</a></p>
+                  </div>
+                  <div class="item">
+                    <p><i class="fa-solid fa-people-group"></i>
+                      <a href="">Customers </a></p>
+                   </div>
+                   <div class="item">
+                    <p><i class="fa-solid fa-list-check"></i>
+                      <a href=""> projects</a></p>
+                   </div>
+                   <div class="item">
+                    <p><i class="fa-solid fa-bag-shopping"></i>
+                      <a href=""> Orders</a></p>
+                   </div>
+                   <div class="item">
+                    <p><i class="fa-solid fa-sliders"></i>
+                      <a href=""> Inventory</a></p>
+                   </div>
+                   <div class="item">
+                    <p><i class="fa-solid fa-user"></i>
+                      <a href=""> Accounts</a></p>
+                   </div>
+                   <div class="item">
+                    <p><i class="fa-solid fa-book"></i>
+                      <a href=""> Tasks</a></p>
+                   </div>
+                </div>
+          </div> 
+           <div class="part2">
+            <h3> <i class="fa-solid fa-bars"></i>Dashboard</h3>
+            <div class="section5">
+                <img src="download.jpg" alt="icon">
+                <p>Manoj Adhikari</p>
+                <p>UI/UX Designer</p>
+            </div>
+            <div class="colum">
+            <div class="directshon">
+                <div class="itemS2">
+                    <span>67</span>
+                    <p>Customers <i class="fa-solid fa-people-group"></i></p>
+                </div>
+                <div class="itemS2">
+                    <span>88</span>
+                    <p>projects <i class="fa-solid fa-list-check"></i></p>
+                </div>
+                <div class="itemS2">
+                    <span>99</span>
+                    <p>Orders <i class="fa-solid fa-bag-shopping"></i></p>
+                </div>
+                <div class="itemS2">
+                    <span>78</span>
+                    <p>Tasks <i class="fa-solid fa-book"></i></p>
+                </div>
+            </div>
+          </div>
+         <div class="part3">
+           <div class="section3">
+              <div class="lin1">
+                <h4> Top Selling projects</h4>
+                <p>Sell All</p>
+              </div>
+              <div class="para">
+                    <p> company</p>
+                    <p>Countact</p>
+                    <p>Country</p>
+              </div>
+              <div class="para">
+                <p>AltredsFutlerkiste</p>
+                <p>MariAnders</p>
+                <p>Germany</p>
+              </div>
+              <div class="para">
+                <p>Centro comerctezuma</p>
+                <p>FranciscoChang</p>
+                <p>Mexico</p>
+              </div>
+              <div class="para">
+                <p>EmstHandel</p>
+                <p>RolandMendel</p>
+                <p>Austria</p>
+              </div>
+              <div class="para">
+                <p>IslandTrading</p>
+                <p>Helen Bennelt</p>
+                <p>UK</p>
+              </div>
+            </div>
+            <div class="section4">
+                <div class="lin1">
+                  <h4>Total Sale</h4>
+                  <p>Sell All</p>
+              </div> 
+              <div class="img">
+                  <img src="images.png" >
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #11</title>
+
+    <style>
+        .outerBox {
+            height: 500px;
+            width: 1000px;
+            background-color: aquamarine;
+            position: relative;
+        }
+
+        h2 {
+            color: white;
+            position: absolute;
+            top: 50px;
+            left: 100px;
+        }
+
+        .linnerBox {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            height: auto;
+            width: 700px; 
+            background-color: white;
+            border: 1px solid;
+            padding: 10px;
+        }
+
+        .item {
+            display: inline-block; 
+            text-align: center;  
+            vertical-align: top;  
+            width: 200px;  
+            margin-right: 10px; 
+        }
+
+        .item img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%; 
+            height: auto;
+        }
+
+        .Title {
+            text-shadow: 4px 4px 1px blue;
+            font-weight:bold ;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="outerBox">
+        <h2>Skills</h2>
+        <div class="linnerBox">
+            <div class="item">
+                <img src="OIP.jpg" alt="HTML Logo">
+                <p class="Title">HTML</p>
+                <p>I have started with HTML. I can create a simple website just like this one.</p>
+            </div>
+            <div class="item">
+                <img src="th.jpg" alt="JavaScript Logo">
+                <p class="Title">Java</p>
+                <p>I'm learning Java from ICT.social courses. I can create simple both console and form applications and I can do object-oriented programming.</p>
+            </div>
+            <div class="item">
+                <img src="download.jpg" alt="Pascal Logo" style="height: 200px;">
+                <p class="Title">Pascal</p>
+                <p>They taught me Pascal in our school, but I prefer learning modern languages from ICT.social.</p>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
