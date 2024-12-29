@@ -272,3 +272,6 @@ while (i >=0){
     alert(num[i])
     i--
 }
+
+
+// added a new function
