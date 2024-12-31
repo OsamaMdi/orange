@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #5: Input check for minimmum number of charecter should be 6 and password match in both input </title>
+    <style>
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        .err {
+            color: red;
+            font-size: 0.7em;
+        }
+    </style>
+    <script>
+        /* TODO complete this part */
+        function checkPassword(obj){
+          
+            
+            let p1 = document.getElementById("password1")
+            let p2 = document.getElementById("password2")
+
+            let err1 = document.getElementById("pw1_check")
+            let err2 = document.getElementById("pw2_check")
+
+            if (p1.value.length < 6){
+                err1.contains = "This password is short"
+            
+           
+        }
+        if (p1.value != p2.value){
+                err2.innerHTML = "not the same" 
+                event.target.form.submit(); 
+                
+            }
+            
+
+        }
+    </script>
+</head>
+<body>
+
+<form name="pw">
+    <table>
+        <tr>
+            <td>Password (min 6 characters):</td>
+            <td><input type="password" name="password1" id="password1" size="10" placeholder="Password"></td>
+            <td>
+                <div id="pw1_check" class="err"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>Repeat password:</td>
+            <td><input type="password" name="password2" id="password2" size="10" placeholder="Password"></td>
+            <td>
+                <div id="pw2_check" class="err"></div>
+            </td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Submit" id="submitBtn" onclick="checkPassword(this)"/>
+</form>
+
+</body>
+</html>
+

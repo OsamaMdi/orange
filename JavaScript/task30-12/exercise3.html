@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #4: Formatting text</title>
+    <style>
+        div {
+            width: 600px;
+            height: 100px;
+            border: 1px solid black;
+            margin-top: 10px;
+            /* default options */
+            font-family: Helvetica;
+            font-size: 12pt;
+        }
+       
+
+    </style>
+ <script>
+function changefamily(obj){
+ 
+    let index = obj.value;
+ 
+  const textt = document.getElementById("text");
+   textt.style.fontFamily = index;
+ 
+}
+function changeSize(obj){
+    let index = obj.value;
+    const textt = document.getElementById("text");
+    textt.style.fontSize = index
+}
+function changeBox(){
+    const textt = document.getElementById("text");
+    
+    const italic = document.getElementById("font_italic").checked;
+    const bold = document.getElementById("font_bold").checked;
+    const underline = document.getElementById("font_underline").checked;
+
+    textt.style.fontStyle = italic ? "italic" : "normal";
+    textt.style.fontWeight = bold ? "bold" : "normal";
+    textt.style.textDecoration = underline ? "underline" : "none";
+
+}
+ </script>
+</head>
+<body>
+<form name="form">
+    <select name="font_family" id="font_family" onclick="changefamily(this)">
+        <option value="Arial" selected>Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Helvetica">Helvetica</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Courier New">Courier New</option>
+    </select>
+    <select name="font_size" id="font_size" onclick="changeSize(this)">
+        <option value="8pt">8pt</option>
+        <option value="10pt">10pt</option>
+        <option value="12pt" selected>12pt</option>
+        <option value="14pt">14pt</option>
+        <option value="16pt">16pt</option>
+    </select>
+    <label>Italic <input type="checkbox" name="font_italic" id="font_italic" onclick="changeBox()"></label>
+    <label>Bold <input type="checkbox" name="font_bold" id="font_bold" onclick="changeBox()"></label>
+    <label>Underline <input type="checkbox" name="font_underline" id="font_underline" onclick="changeBox()"></label>
+</form>
+
+<div id="text">The quick brown fox jumps over the lazy dog</div>
+</body>
+</html>

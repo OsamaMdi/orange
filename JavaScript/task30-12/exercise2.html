@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #2: Changing box color on click</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        /* TODO: write JS code here */
+    </script>
+</head>
+<body>
+<div id="mydiv" onclick="chengeColor(this)"></div>
+<script>
+function chengeColor(obj){
+let cont = Math.floor(Math.random() * colors.length);
+obj.style.backgroundColor =  `${colors[cont]}` ;
+
+}
+const colors = [
+  "rgb(255, 0, 0)",    // Red
+  "rgb(0, 255, 0)",    // Green
+  "rgb(0, 0, 255)",    // Blue
+  "rgb(255, 255, 0)",  // Yellow
+  "rgb(0, 255, 255)",  // Cyan
+  "rgb(255, 0, 255)",  // Magenta
+  "rgb(128, 0, 0)",    // Maroon
+  "rgb(0, 128, 0)",    // DarkGreen
+  "rgb(0, 0, 128)",    // Navy
+  "rgb(128, 128, 0)",  // Olive
+  "rgb(128, 0, 128)",  // Purple
+  "rgb(0, 128, 128)",  // Teal
+  "rgb(192, 192, 192)",// Silver
+  "rgb(128, 128, 128)",// Gray
+  "rgb(255, 165, 0)",  // Orange
+  "rgb(255, 20, 147)", // DeepPink
+  "rgb(75, 0, 130)",   // Indigo
+  "rgb(240, 230, 140)",// Khaki
+  "rgb(210, 105, 30)", // Chocolate
+  "rgb(70, 130, 180)"  // SteelBlue
+];
+</script>
+</body>
+</html>

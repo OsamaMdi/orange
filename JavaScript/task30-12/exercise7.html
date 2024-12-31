@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #flag{
+            width: 400px;
+            height: 200px;
+            border: 1px solid black;
+            margin-top: 10px;
+            background-image: url('images/download.png') ;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <script>
+        function changeimg(obj){
+
+            const sNImg = document.getElementById("Countries");
+            let img = document.getElementById("flag")
+             
+            if (sNImg.value == "canada"){
+             
+                img.style.backgroundImage = "url('images/canada.png')"
+            }
+            else if (sNImg.value == "norway"){
+                img.style.backgroundImage = "url('images/norway.png')"
+            }
+            else{
+                img.style.backgroundImage = "url('images/download.png')"
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="form">
+        <select name="Countries" id="Countries" onclick="changeimg(this)">
+            <option value="uk" selected>UK</option>
+            <option value="canada">Canada</option>
+            <option value="norway">Norway</option>
+        </select>
+        <div id="flag"></div>
+</body>
+</html>
