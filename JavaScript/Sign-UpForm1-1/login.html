@@ -1,0 +1,97 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/css/boosted.min.css" rel="stylesheet" integrity="sha384-laZ3JUZ5Ln2YqhfBvadDpNyBo7w5qmWaRnnXuRwNhJeTEFuSdGbzl4ZGHAEnTozR" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/boosted@5.3.3/dist/js/boosted.bundle.min.js" integrity="sha384-3RoJImQ+Yz4jAyP6xW29kJhqJOE3rdjuu9wkNycjCuDnGAtC/crm79mLcwj1w2o/" crossorigin="anonymous"></script>
+    <script src="ScribtForm.js"></script>
+    <title>Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f7f7f7;
+        }
+
+        .form {
+            border: solid 3px black;
+            width: 45vw;
+            height: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            font-size: 16px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        small {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .d-grid {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .btn-block {
+            width: 100%;
+        }
+
+        .btn-warning {
+            background-color: #f39c12;
+            color: white;
+        }
+        span {
+            color: #f39c12;
+        }
+    </style>
+</head>
+<body>
+  <div class="form">
+    <div class="form-group">
+        <label for="loginEmail">Email address <span>*</span></label>
+        <input type="text" id="loginEmail" name="Email" placeholder="Please Enter your Email address" class="form-control">
+        <small id="logEmailHelp">eg: username@domain.com</small>
+    </div>
+
+    <div class="form-group">
+        <label for="loginPassword">Password <span>*</span></label>
+        <input type="password" id="loginPassword" name="Password" placeholder="Please Enter your Password" class="form-control">
+        <small id="passHelp">Enter your Password</small>
+    </div>
+
+    <div class="d-grid">
+        <button type="button" class="btn btn-warning btn-block"  id="login" onclick="login(this)">Log In</button>
+    </div>
+  </div>
+ 
+</body>
+</html>
