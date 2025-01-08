@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .addTask {
+            background-color: #007bff; 
+    color: white; 
+    padding: 5px 10px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin: 10px;
+        }
+        .addText{
+            padding: 5px 10px;
+            width: 327px;
+        }
+        .TimerClass{
+            padding: 5px 10px;
+            margin-top: 0;
+            width: 218px;
+        }
+        .deleteButton{
+            margin-left: 5px;
+            padding: 3px 6px;
+            background-color: red;
+            border: none;
+            font-size: 10px;
+            cursor: pointer; 
+            color: white;
+            
+        }
+        .task2 , .task1 , .task3 , .task4{
+            border: 2px black solid;
+            width: 350px;
+            height: auto;
+            margin: 10px;
+            text-align: center;
+            background-color: white;
+            
+        }
+        .errMas{
+            color: red;
+            font-size: 10px;
+            margin-top: 1px;
+            text-align: left;
+        }
+        .row2 , .row1{
+            display: flex;
+            flex-direction: row;
+            margin: 5px;
+        }
+        .sTimer{
+            font-size: 20px;
+        }
+        .erTable{
+            font-size: 30px ;
+            text-align: center;
+            color: red;
+        }
+        .tableStyle{
+           border-collapse: collapse;
+           margin: 20px auto;
+           width: 300px;
+           border-radius: 5px ;
+        }
+        .tableStyle th , .tableStyle td{
+
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .tableStyle th {
+
+            background-color: #f0f0f0 ;
+            font-weight: bold;
+            font-size: 20px;
+        }
+       
+         .inputStyle{
+            padding: 5px 10px;
+            width: 270px;
+            margin-top: 10px;
+         }
+    </style>
+  
+</head>
+<body>
+    <div class="row1">
+    <div class="task1">
+        <input type="Text" id="TaskInput" size="40" class="addText"  placeholder="Task name">
+        <br>
+        <input type="button" id="addButton" value="Add Task" class="addTask" onclick="addAndRemoveTask(this)">
+    
+    <ul id="playlist">  
+    </ul>
+
+    </div>
+
+    <div class="task2">
+     
+        <input type="Text" id="EnterTheNumber" size="40" class="addText"  placeholder="Enter The Value of Converter">
+        <br>
+        <p id="eer1" class="errMas"></p>
+        <br>
+        <input type="Text" id="EnterType" size="40" class="addText"  placeholder="Enter the unit (C for Celsius, F for Fahrenheit): ">
+        <br>
+
+        <p id="eer2" class="errMas"></p>
+        <input type="button" id="Converter" value="Converter" class="addTask" onclick="TemperatureConverter(this)">
+    </div>
+</div>  
+<div class="row2">
+
+    <div class="task3">
+    <input type="Text" id="EnterTheTimer" size="40" class="TimerClass"  placeholder="Enter The number of Second need">
+    <input type="button" id="startTimer"  value="Start" class="addTask" onclick="clock()">
+    <br>
+    <p id="errTimer" class="errMas" ></p>
+    <p id="shwoTimer" class="sTimer"></p>
+ </div>
+     <div class="task4">
+
+        <table align="center" id="table" class="tableStyle">
+            <input type="search" id="inputSearch" placeholder="search..." class="inputStyle">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                </tr> 
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td>Osama Madi</td>
+                    <td>22</td>
+                    <td>Male</td>
+                    <td>Jordan</td>
+                </tr>
+                  <tr>
+                    <td>Ahmad Ali</td>
+                    <td>25</td>
+                    <td>Male</td>
+                    <td>Los Angeles</td>
+                  </tr>
+                  <tr>
+                    <td>Nour Ali</td>
+                    <td>20</td>
+                    <td>Male</td>
+                    <td>Norwau</td>
+                  </tr>
+                  <tr>
+                    <td>Ayman</td madi>
+                    <td>28</td>
+                    <td>Male</td>
+                    <td>Russia</td>
+                  </tr>
+            </tbody>
+        </table>
+        <p id="errTable" class="erTable"></p>
+     </div>
+</div>
+    <script>  
+          //--------------------Task1-------------------
+        function addAndRemoveTask(obj) {
+            
+            let textt = document.getElementById("TaskInput");
+            let listt = document.getElementById("playlist")
+
+            if (textt.value  == ""){
+                alert("plaees Enter Task")
+        }
+          else{
+            
+            
+            const Task = document.createElement("li");
+            let textTask = document.createTextNode(textt.value);
+            textt.value.textContent = "Task name";
+            Task.appendChild(textTask);
+            listt.appendChild(Task);
+            textt.value = ""
+
+            const deleteButton = document.createElement("button")
+            deleteButton.textContent = ("Delete")
+            deleteButton.className = "deleteButton";
+            deleteButton.onclick = function(){
+                listt.removeChild(Task); 
+            }
+            Task.appendChild(deleteButton);
+        }
+        
+        }
+          //--------------------Task2-------------------
+      
+           function TemperatureConverter(obj){
+
+            let numberValue = document.getElementById("EnterTheNumber").value
+            let numValue =  parseInt(numberValue, 10);
+            let textConverter = document.getElementById("EnterType")
+            let errMassege = document.getElementById("eer1")
+            let errMassege2 = document.getElementById("eer2")
+
+            if( numberValue.trim() === "" || isNaN(numValue) || numValue === 0){
+
+                errMassege.innerText = "* Please enter a number other than 0 "
+                document.getElementById("EnterTheNumber").value = ""
+                return;
+            }
+            else{
+                errMassege.innerHTML = ""
+                document.getElementById("EnterTheNumber").value = ""
+
+                if (textConverter.value.toLowerCase() === "c" ){
+                    
+                    let result = (numValue * 9 / 5) + 32;
+                    errMassege2.innerText = "Celsius: " + result;
+                }
+                else if(textConverter.value.toLowerCase() === "f"){
+
+                    let result = (numValue - 32) * 5 / 9; 
+                    errMassege2.innerText = "Fahrenheit: " + result.toFixed(2);
+                    
+                }
+                else{
+                    errMassege2.innerText = "* Please enter the unit (C for Celsius, F for Fahrenheit "
+                    document.getElementById("EnterType").value = ""
+                    return;
+                }
+                
+                
+                document.getElementById("EnterType").value = ""
+            }
+           }
+          
+            //------------------------Task3----------------------
+
+            function clock(){
+               
+                let myTimer;
+                let T = document.getElementById("EnterTheTimer");
+                let PT = document.getElementById("shwoTimer");
+                let E = document.getElementById("errTimer");
+                   
+                let TT = parseInt(T.value);
+
+                if (TT === 0 || TT === "" || TT< 0 || isNaN(TT)){
+    
+                    E.innerHTML = "* Please enter a number greater than 0. "
+                    document.getElementById("EnterTheTimer").value = "";
+                    return;
+                }  
+                else{
+                    E.innerHTML = ""
+                    myTimer = setInterval(beginTimer, 1000);
+               function beginTimer(){
+                 
+                   PT.innerHTML =  --TT;
+                   document.getElementById("EnterTheTimer").value = "";
+                   if ( TT == 0 ){
+
+                    PT.innerHTML = "The Temr is finish ."
+                    clearInterval(myTimer);
+                   }
+                }
+               }
+            }
+                  // ---------------------------Task4----------------------------------
+                 
+       const input = document.getElementById("inputSearch");
+       let err = document.getElementById("errTable")
+       
+
+       input.addEventListener("input", function(){
+    
+        const searchValue = this.value.toLowerCase();
+        const rows = document.querySelectorAll("#table tbody tr")
+        
+        rows.forEach(row=>{
+            const cells = row.querySelectorAll("td")
+            let containsValue = false;
+            cells.forEach(cell=>{
+
+                if(cell.textContent.toLowerCase().includes(searchValue)){
+                    
+                    containsValue = true;
+                }
+            });
+
+             if(containsValue){  row.style.display = ""; 
+             
+             }
+
+             else {  row.style.display = " none "; 
+                     err.textContent = " not Found";
+                   }
+                   
+        })
+       })
+      </script>
+</body>
+</html>

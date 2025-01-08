@@ -16,8 +16,7 @@
     <script>
         /* TODO complete this part */
         function checkPassword(obj){
-          
-            
+
             let p1 = document.getElementById("password1")
             let p2 = document.getElementById("password2")
 
@@ -25,15 +24,22 @@
             let err2 = document.getElementById("pw2_check")
 
             if (p1.value.length < 6){
-                err1.contains = "This password is short"
-            
+                  err1.innerHTML = "This password is short"      
            
         }
+          else {
+             err1.innerHTML = ""
+          }
         if (p1.value != p2.value){
-                err2.innerHTML = "not the same" 
-                event.target.form.submit(); 
-                
+               err2.innerHTML = "not the same" 
+              
             }
+            else {
+             err2.innerHTML = ""
+          }
+          if (err1.innerHTML  || err2.innerHTML){
+            event.preventDefault();
+          }
             
 
         }

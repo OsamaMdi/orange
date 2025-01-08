@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Exercise #4</title>
+        <style>
+            body{
+              margin: 0;
+            padding: 0;  
+                background-color: rgb(49, 183, 138);
+            }
+             .contenr{
+                
+                background-color: rgb(169, 232, 211);
+                display:grid ;
+                grid-template-rows: repeat(5, 1fr);
+                grid-template-columns: repeat(4 , 1fr);
+                justify-self: center;
+                gap: 5px;
+                height: 500px;
+                width: 400px;
+               padding: 5px;
+               font-size: 30px;
+               text-align: center;
+               line-height: 50px; 
+               position: absolute;
+                 top: 50%;
+                 left: 50%;
+                 transform: translate(-50%, -50%);
+             }
+             .box{
+                
+                background-color:silver;
+                width: 80px;
+                height: 60px;
+                justify-self: center;
+                align-self: center;
+             }
+             .boxc{
+               
+                background-color: yellow;
+                width: 80px;
+                height: 60px;
+                justify-self: center;
+                align-self: center;
+                text-align: center;
+             }
+             
+             .box:nth-child(1){
+                width: 95%;
+                grid-column:1/5 ;
+                grid-row: 1;
+             }
+             .box:nth-child(2){
+                grid-column:1/2 ;
+                grid-row: 2;
+             }
+             .box:nth-child(3){
+                grid-column:2/3 ;
+                grid-row: 2;
+             }
+             .box:nth-child(4){
+                grid-column:3/4 ;
+                grid-row: 2;
+             }
+             .boxc:nth-child(1){
+                grid-column: 4/5;
+                grid-row: 2;
+             }
+
+             .box:nth-child(5){
+                grid-column:1/2 ;
+                grid-row: 3;
+             }
+             
+             .box:nth-child(6){
+                grid-column:2/3 ;
+                grid-row: 3;
+             }
+             .box:nth-child(7){
+                grid-column:3/4 ;
+                grid-row: 3;
+             }
+             .boxc:nth-child(4){
+                grid-column: 4/5;
+                grid-row: 3;
+             }
+             .box:nth-child(8){
+                grid-column:1/2 ;
+                grid-row: 4;
+             }
+             .box:nth-child(9){
+                grid-column:2/3 ;
+                grid-row: 4;
+             }
+             .box:nth-child(10){
+                grid-column:3/4 ;
+                grid-row: 4;
+             }
+             .boxc:nth-child(3){
+                grid-column: 4/5;
+                grid-row: 4;
+             }
+             .box:nth-child(12){
+                background-color: rgb(176, 9, 98);
+                grid-column:1/2 ;
+                grid-row: 5;
+               
+             }
+             .box:nth-child(11){
+                grid-column:2/3 ;
+                grid-row: 5;
+             }
+             .box:nth-child(13){
+                grid-column:3/4 ;
+                grid-row: 5;
+             }
+             .boxc:nth-child(2){
+                grid-column: 4/5;
+                grid-row: 5;
+             }
+             button{
+               border: none;
+               font-size: 25px;
+               border: 1px solid;
+             }
+             #Show{
+               color: black;
+               background-color: rgb(179, 179, 252);
+               font-size: 25px;
+             }
+             
+        </style>
+    </head>
+    <body>
+        
+      <div class="contenr">
+         <input type="text" name="display" class="box" id="Show">
+         <button class="box" onclick="appendValue('1')"  >1</button>
+         <button class="box" onclick="appendValue('2')">2</button>
+         <button class="box" onclick="appendValue('3')">3</button>
+         <button class="box" onclick="appendValue('4')">4</button>
+         <button class="box" onclick="appendValue('5')">5</button>
+         <button class="box" onclick="appendValue('6')">6</button>
+         <button class="box" onclick="appendValue('7')">7</button>
+         <button class="box" onclick="appendValue('8')">8</button>
+         <button class="box" onclick="appendValue('9')">9</button>
+         <button class="box" onclick="appendValue('0')">0</button>
+         <button class="box" onclick="clearDisplay()">C</button>
+         <button class="box" onclick="calculateResult()" style="color: rgb(68, 135, 137);">=</button>
+         <button class="box" onclick="appendValue('+')"style="color: rgb(68, 135, 137);">+</button>
+         <button class="box" onclick="appendValue('/')"style="color: rgb(68, 135, 137);">/</button>
+         <button class="box" onclick="appendValue('*')"style="color: rgb(68, 135, 137);">*</button>
+         <button class="box" onclick="appendValue('-')"style="color: rgb(68, 135, 137);">-</button>
+     </div>
+
+        <script src="sriptCalc.js"></script>
+    </body>
+</html>
