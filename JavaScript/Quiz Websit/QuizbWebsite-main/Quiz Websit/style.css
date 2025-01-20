@@ -1,0 +1,60 @@
+body {
+  background-image: url("/imges/lines.png");
+}
+
+/* Main container */
+#mainDiv {
+  width: 90%;
+  max-width: 600px;
+  min-height: 520px;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+}
+
+/* Form styling */
+#form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form fields */
+.form-group input {
+  border-radius: 7px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* Login section */
+#acc {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#log {
+  color: black;
+  text-decoration: none;
+}
+
+#log:hover {
+  transition: color 1s;
+  color: blue;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #mainDiv {
+    padding: 15px;
+  }
+
+  #form {
+    gap: 15px;
+  }
+
+  .form-group input {
+    width: 100%;
+  }
+}

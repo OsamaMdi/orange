@@ -1,0 +1,173 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f4f4f9;
+}
+
+
+.quiz-container,
+.quiz-result {
+    width: 90%;
+    max-width: 900px;
+    margin: 70px auto 0;
+    margin-top: 50px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+/* المؤقت */
+.quiz-container .timer {
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 25px;
+    text-align: end;
+}
+
+.timer {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    margin-top: 0;
+    text-align: end;
+}
+
+.danger {
+    color: red;
+}
+
+/* السؤال */
+.quiz-container h2.question {
+    font-size: 20px;
+    background: rgb(252, 221, 163);
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* الخيارات */
+.quiz-container .options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.quiz-container .option {
+
+    font-weight: 500;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #0d6efd;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.4s;
+}
+
+.quiz-container .option:hover {
+    background-color: rgb(0, 25, 98);
+}
+
+/* الخيارات المعطلة */
+.disabled {
+    pointer-events: none;
+    opacity: 0.7;
+}
+
+
+/* Result PaGE */
+#nextButton {
+    background-color: rgb(252, 221, 163);
+    font-weight: 500;
+    width: 150px;
+    padding: 10px;
+    margin: 20px 20px;
+    cursor: pointer;
+}
+
+.quiz-container #nextButton:hover {
+    background-color: rgb(255, 182, 46);
+}
+
+/* أزرار التنقل */
+.retake-btn,
+.no-retake-btn {
+    margin: auto;
+    background-color: #0d6efd;
+    padding: 12px 32px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+    color: white;
+    border: none;
+    width: 30%;
+}
+
+.no-retake-btn {
+    background-color: rgb(252, 221, 163);
+    color: black;
+}
+
+
+.no-retake-btn:hover {
+    background-color: rgb(255, 182, 46);
+}
+
+.retake-btn:hover {
+    background-color: rgb(0, 25, 98);
+}
+
+
+
+/* نتيجة الاختبار */
+.quiz-result {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.quiz-result .question-container {
+
+    margin: auto;
+    width: 70%;
+    padding: 12px;
+    border: 1px solid #eee;
+    background: #f4f4f9;
+    border-radius: 8px;
+
+}
+
+
+.quiz-result .question-container .question {
+    font-weight: bold;
+}
+
+.question-number {
+    font-size: 20px;
+
+    color: #000;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+/* تحسينات للجوال */
+@media (max-width: 700px) {
+    .quiz-container .options {
+        grid-template-columns: 1fr;
+    }
+}

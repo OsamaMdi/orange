@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Info</title>
+</head>
+<body>
+    <h1>YouTube Video Info</h1>
+    <div id="video-info">
+        <p id="title"></p>
+        <p id="description"></p>
+        <p id="channel"></p>
+        <p id="published"></p>
+        <img id="thumbnail" alt="Thumbnail" />
+    </div>
+
+    <script>
+        const videoId = 'arj7oStGLkU';  // Replace with the actual video ID
+        const apiKey = 'AIzaSyDD4DCmX3C_XI3E240uVFMEhe3VeQSX2fc';  // Replace with your actual API key
+
+        const url = https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${videoId}&key=${apiKey};
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.items && data.items.length > 0) {
+                    const video = data.items[0].snippet;
+
+                    // Displaying video information
+                    document.getElementById('title').innerText = Title: ${video.title};
+                    document.getElementById('description').innerText = Description: ${video.description};
+                    document.getElementById('channel').innerText = Channel: ${video.channelTitle};
+                    document.getElementById('published').innerText = Published At: ${video.publishedAt};
+                    document.getElementById('thumbnail').src = video.thumbnails.high.url;
+                } else {
+                    alert('No video found with this ID.');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching YouTube video data:', error);
+            });
+    </script>
+</body>
+</html>

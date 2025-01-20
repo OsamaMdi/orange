@@ -1,0 +1,143 @@
+[
+  [
+      {
+          "question": "What is the plural form of 'box'?",
+          "answers": [
+              { "text": "A) Boxs", "correct": false },
+              { "text": "B) Boxes", "correct": true },
+              { "text": "C) Boxies", "correct": false },
+              { "text": "D) Boxen", "correct": false }
+          ]
+      },
+      {
+          "question": "Which article is used before a vowel sound?",
+          "answers": [
+              { "text": "A) A", "correct": false },
+              { "text": "B) An", "correct": true },
+              { "text": "C) The", "correct": false },
+              { "text": "D) No article", "correct": false }
+          ]
+      },
+      {
+          "question": "What is the past tense of 'walk'?",
+          "answers": [
+              { "text": "A) Walked", "correct": true },
+              { "text": "B) Walking", "correct": false },
+              { "text": "C) Walks", "correct": false },
+              { "text": "D) Walk", "correct": false }
+          ]
+      },
+      {
+          "question": "Which word is a noun?",
+          "answers": [
+              { "text": "A) Run", "correct": false },
+              { "text": "B) Quickly", "correct": false },
+              { "text": "C) Happiness", "correct": true },
+              { "text": "D) Bright", "correct": false }
+          ]
+      },
+      {
+          "question": "Choose the correct sentence:",
+          "answers": [
+              { "text": "A) He go to school.", "correct": false },
+              { "text": "B) He goes to school.", "correct": true },
+              { "text": "C) He gone to school.", "correct": false },
+              { "text": "D) He going to school.", "correct": false }
+          ]
+      }
+  ],
+  [
+      {
+          "question": "What is the comparative form of 'good'?",
+          "answers": [
+              { "text": "A) Gooder", "correct": false },
+              { "text": "B) More good", "correct": false },
+              { "text": "C) Better", "correct": true },
+              { "text": "D) Best", "correct": false }
+          ]
+      },
+      {
+          "question": "Which sentence uses the correct verb tense?",
+          "answers": [
+              { "text": "A) I have seen that movie yesterday.", "correct": false },
+              { "text": "B) I saw that movie yesterday.", "correct": true },
+              { "text": "C) I seen that movie yesterday.", "correct": false },
+              { "text": "D) I was seeing that movie yesterday.", "correct": false }
+          ]
+      },
+      {
+          "question": "Which word is a preposition?",
+          "answers": [
+              { "text": "A) Jump", "correct": false },
+              { "text": "B) Under", "correct": true },
+              { "text": "C) Quickly", "correct": false },
+              { "text": "D) Smart", "correct": false }
+          ]
+      },
+      {
+          "question": "Choose the correct indirect question: 'Where is the bank?'",
+          "answers": [
+              { "text": "A) Can you tell me where the bank is?", "correct": true },
+              { "text": "B) Can you tell me where is the bank?", "correct": false },
+              { "text": "C) Can you tell me where bank is?", "correct": false },
+              { "text": "D) Can you tell where is the bank?", "correct": false }
+          ]
+      },
+      {
+          "question": "Identify the correct usage of the conditional tense:",
+          "answers": [
+              { "text": "A) If I will study, I pass the test.", "correct": false },
+              { "text": "B) If I study, I will pass the test.", "correct": true },
+              { "text": "C) If I studied, I will pass the test.", "correct": false },
+              { "text": "D) If I study, I passed the test.", "correct": false }
+          ]
+      }
+  ],
+  [
+      {
+          "question": "What is the meaning of 'euphemism'?",
+          "answers": [
+              { "text": "A) A direct statement", "correct": false },
+              { "text": "B) A polite way to say something unpleasant", "correct": true },
+              { "text": "C) An exaggeration", "correct": false },
+              { "text": "D) A figure of speech", "correct": false }
+          ]
+      },
+      {
+          "question": "Identify the passive voice sentence:",
+          "answers": [
+              { "text": "A) The chef cooked a delicious meal.", "correct": false },
+              { "text": "B) A delicious meal was cooked by the chef.", "correct": true },
+              { "text": "C) The chef is cooking a delicious meal.", "correct": false },
+              { "text": "D) The chef cooks a delicious meal.", "correct": false }
+          ]
+      },
+      {
+          "question": "What is the subjunctive mood used for?",
+          "answers": [
+              { "text": "A) Expressing facts", "correct": false },
+              { "text": "B) Expressing wishes or hypothetical situations", "correct": true },
+              { "text": "C) Expressing commands", "correct": false },
+              { "text": "D) Expressing past actions", "correct": false }
+          ]
+      },
+      {
+          "question": "Which sentence has a misplaced modifier?",
+          "answers": [
+              { "text": "A) Running quickly, the dog chased the ball.", "correct": false },
+              { "text": "B) The dog chased the ball running quickly.", "correct": true },
+              { "text": "C) The dog, running quickly, chased the ball.", "correct": false },
+              { "text": "D) Chased the ball, the dog ran quickly.", "correct": false }
+          ]
+      },
+      {
+          "question": "What does 'parallel structure' mean in grammar?",
+          "answers": [
+              { "text": "A) Repeating the same word", "correct": false },
+              { "text": "B) Combining clauses into one sentence", "correct": false },
+              { "text": "C) Using similar grammatical forms for related ideas", "correct": true },
+              { "text": "D) Using synonyms in writing", "correct": false }
+          ]
+      }
+  ]
+]

@@ -1,0 +1,82 @@
+# Login Page Documentation
+
+## Overview
+The login page is an essential part of the application. It serves as a gateway for users to access the quiz functionality. Without logging in, users can only view information about quiz topics. This document provides a detailed explanation of the page's structure, functionality, and implementation.
+
+---
+
+## Purpose
+- Allow registered users to log in and access the quiz.
+- Restrict unregistered users to only viewing information related to quiz topics.
+
+---
+
+## Technologies Used
+- **HTML**: For the page structure.
+- **CSS**: For styling the page elements.
+- **JavaScript**: For adding functionality and validation.
+
+---
+
+## Page Structure
+
+### 1. **Form Fields**
+- **Email Input Field**
+  - Placeholder: "Enter your email address"
+  - Example of a valid email: `example@example.com`
+- **Password Input Field**
+  - Placeholder: "Enter your password"
+
+### 2. **Checkbox**
+- Label: "Remember Me"
+- Functionality: Saves the email and password in the input fields using `localStorage`, so they are automatically filled when returning to the login page.
+
+### 3. **Button**
+- Label: "Login"
+- Actions:
+  1. Checks if the email field is empty.
+  2. Ensures the email is in the correct format.
+  3. Checks if the password field is empty.
+  4. Verifies if the email and password exist in `localStorage`.
+
+### 4. **Validation Messages**
+- Displayed below the login button when conditions are not met:
+  1. "Please enter your email address." (If the email field is empty)
+  2. "Sorry, the email is written incorrectly." (If the email does not match the required format)
+  3. "Please enter your password." (If the password field is empty)
+  4. "The email or password was not found." (If the credentials are not found in `localStorage`)
+
+### 5. **Link**
+- Located below the form.
+- Label: "Register"
+- Redirects users to the account creation page.
+
+---
+
+## Functionality
+
+### Validation Workflow
+1. **Email Field**:
+   - Checks that the field is not empty.
+   - Validates the format using a regular expression.
+2. **Password Field**:
+   - Checks that the field is not empty.
+3. **LocalStorage Verification**:
+   - Looks for matching email and password in `localStorage`.
+   - Displays an error message if no match is found.
+
+### "Remember Me" Functionality
+- When the checkbox is selected, the email and password are saved in `localStorage`.
+- When returning to the page, the input fields are pre-filled with the saved data.
+
+---
+
+## Notes
+- Validation messages are styled and displayed below the login button to enhance the user experience.
+- The login page currently lacks advanced security features, such as encryption or server-side validation, as it is built using frontend-only technologies.
+
+---
+
+## Conclusion
+The login page ensures a smooth user experience by validating inputs and allowing seamless access to the quiz. It utilizes local storage for convenience while maintaining simplicity through frontend technologies only.
+

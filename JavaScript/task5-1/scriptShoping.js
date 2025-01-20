@@ -6,6 +6,9 @@ let totaleP = 500;
 document.getElementById("addphone").addEventListener("click", function(){
      
     if (clicPhone == false){
+        
+        
+       
     document.getElementById("section").innerHTML = `
     <div class="section1" id="divToRemove" >
         <div class="section1Img">     
@@ -13,7 +16,7 @@ document.getElementById("addphone").addEventListener("click", function(){
         
         <div class="cont" id="contennar">
             <div id="negativ" class="AS" onclick="variabeclick(this)">-</div>
-            <div class="var" id="variabel" >1</div>
+            <div class="var" id="variabel" >${contI}</div>
             <div id="posativ" class="AS" onclick="posaticlick(this)">+</div>
         </div>
              
@@ -23,7 +26,10 @@ document.getElementById("addphone").addEventListener("click", function(){
             </div>
         </div>
     </div>`;
-   
+    const savePhone = document.getElementById("section")
+    localStorage.setItem("savePhone", savePhone.outerHTML)
+    console.log(localStorage.getItem("savePhone"))
+    
     sessionStorage.setItem("addphone", totaleP);
     updateTotal();
 
@@ -287,4 +293,9 @@ function updateTotal() {
          
         totalText.innerHTML = "";
     }
+}
+window.onload = function() {
+    const osama = JSON.parse(localStorage.getItem("savephone"));
+    
+
 }

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div
+      id="mainDiv"
+      class="parent container d-flex flex-column justify-content-center align-items-center mt-4 p-3"
+    >
+      <h2>CREATE ACCOUNT</h2>
+
+      <form id="form" class="w-100">
+        <div class="form-group mb-3">
+          <label for="username" class="form-label">
+            Username <span class="text-danger">*</span>
+          </label>
+          <small class="text-danger" id="sUsername"></small>
+          <input
+            type="text"
+            class="form-control"
+            id="username"
+            placeholder="username"
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="email" class="form-label">
+            Email <span class="text-danger">*</span>
+          </label>
+          <small class="text-danger" id="sEmail"></small>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="email address"
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="pass" class="form-label">
+            Password <span class="text-danger">*</span>
+          </label>
+          <small class="text-danger" id="sPass"></small>
+          <input
+            type="password"
+            class="form-control"
+            id="pass"
+            placeholder="Password"
+          />
+        </div>
+        <div class="form-group mb-3">
+          <label for="confirmPass" class="form-label">
+            Confirm Password <span class="text-danger">*</span>
+          </label>
+          <small class="text-danger" id="sRePass"></small>
+          <input
+            type="password"
+            class="form-control"
+            id="confirmPass"
+            placeholder="Confirm password"
+          />
+        </div>
+        <div class="form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="check" />
+          <label for="check" class="form-check-label">
+            I accept
+            <a href="#" class="text-decoration-none">Terms & Conditions</a>
+            <small class="text-danger" id="sTerms"></small>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Register</button>
+      </form>
+    </div>
+
+    <div id="acc" class="text-center mt-3">
+      <p>Already Have an Account?</p>
+      <a id="log" href="LoginPage.html" class="fw-bold ms-1"> Login</a>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>

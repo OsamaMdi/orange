@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #question-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #Question {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .answer {
+            font-size: 16px;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        input[type="button"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="button"]:hover {
+            background-color: #45a049;
+        }
+
+        input[type="button"]:active {
+            background-color: #3e8e41;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #f1f1f1;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        button:active {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="question-container">
+        <div id="Question"></div>
+        <button id="A" class="answer" onclick="checkAnswer('A')"></button>
+        <button id="B" class="answer" onclick="checkAnswer('B')"></button>
+        <button id="C" class="answer" onclick="checkAnswer('C')"></button>
+        <button id="D" class="answer" onclick="checkAnswer('D')"></button>
+        <input type="button" id="Next" value="Next Question" onclick="ShowQuestion()">
+        <input type="button" id="result" value="Result" onclick>
+    </div>
+
+    <script>
+        let userAnswers =[];
+        let questions = [];
+        let currentQuestionIndex = 0;
+        const Result = document.getElementById("result")
+  
+        window.onload = function(){
+               Result.style.display = "none"
+        }
+
+        function ShowQuestion() {
+            
+            fetch('web.json')
+                .then(response => response.json())
+                .then(data => {
+                    questions = data;
+                    displayQuestion();
+                })
+                .catch(error => console.error('Error loading the JSON file:', error));
+        }
+
+
+         
+        const Q = document.getElementById("Question");
+                const A = document.getElementById("A");
+                const B = document.getElementById("B");
+                const C = document.getElementById("C");
+                const D = document.getElementById("D");
+
+        function displayQuestion() {
+            if (currentQuestionIndex < questions.length) {
+                const question = questions[currentQuestionIndex];
+               
+                Q.innerHTML = `Question ${currentQuestionIndex + 1}: ${question.question}`;
+                A.innerHTML = `A: ${question.A}`;
+                B.innerHTML = `B: ${question.B}`;
+                C.innerHTML = `C: ${question.C}`;
+                D.innerHTML = `D: ${question.D}`;
+
+                currentQuestionIndex++;
+                if(currentQuestionIndex == questions.length){
+                 const nextButton =  document.getElementById("Next")
+                 nextButton.style.display = "none";
+                 Result.style.display = "block"
+                }
+            } else {
+                alert("Quiz Completed!");
+                currentQuestionIndex = 0;
+            }
+        }
+
+
+
+
+
+        
+        function checkAnswer(selectedAnswer) {
+            userAnswers[currentQuestionIndex - 1] = selectedAnswer;
+
+            
+            if (selectedAnswer === correctAnswer) {
+                alert("Correct!");
+               
+            } else {
+                alert("Wrong! The correct answer is: " + correctAnswer);
+            }
+        }
+    </script>
+</body>
+</html>

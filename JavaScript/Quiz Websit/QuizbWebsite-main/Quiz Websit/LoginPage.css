@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+.containerLohin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("imges/lines.png");
+
+  /* background-size: cover; */
+}
+.formLogin {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  width: 45vw;
+  height: auto;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.styleLoginForm {
+  width: 80vw;
+  height: auto;
+  padding: 20px;
+  max-width: 100%;
+  text-align: start;
+  color: rgba(33, 33, 33, 0.692);
+}
+.styleLoginEmail {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 15px;
+}
+.styleLoginPassword {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 15px;
+}
+.styleLoginChec {
+  width: 17px;
+  height: 17px;
+  padding: 20px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.styleLoginButton {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  color: white;
+  padding: 15px;
+  background-color: rgb(60, 108, 196);
+  border: none;
+  cursor: pointer;
+}
+.styleHederLogin {
+  font-size: 35px;
+}
+.linkRegisterPage {
+  padding: 20px;
+  color: rgba(32, 31, 31, 0.767);
+}
+.linkRegisterPage a {
+  color: rgba(22, 22, 22, 0.838);
+  text-decoration: none;
+}
+.styleErrorMessage {
+  color: red;
+  font-size: 10px;
+  margin-top: 3px;
+}
+
+.reg:hover {
+  transition: color 1s;
+
+  color: blue;
+}
+@media screen and (max-width: 450px) {
+  .formLogin {
+    width: 80vw;
+  }
+}
