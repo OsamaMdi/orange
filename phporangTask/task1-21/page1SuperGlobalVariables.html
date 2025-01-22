@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .getUrl{
+           
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+    <script>
+
+       function validateURL(){
+        let url = document.getElementById("url").value;
+        if (!(url.endsWith('.html') || url.endsWith('.php'))) {
+            alert("Please enter a valid URL ending with .html or .php");
+             return false
+        }
+        return true
+       }
+    </script>
+</head>
+<body>
+    <div class="getUrl">
+    <form action="process.php" method="post" onsubmit="return validateURL()">
+        <label  for="url">Entwr The URL Page:</label>
+        <input  type="text" id="url" name="url"  required>
+        <br>
+        <input class="getUrl" type="submit" name="button" value="go">
+    </form> 
+    </div>
+   
+</body>
+</html>
