@@ -1,0 +1,65 @@
+Q1)   creat databes CompanyDB;
+ USE   CompanyDB;
+Q2)
+CREATE TABLE Departments (
+    ID INT AUTO_INCREMENT PRIMARY KEY,      
+    DepartmentName VARCHAR(100) NOT NULL   
+);
+CREATE TABLE Employees (
+    ID INT AUTO_INCREMENT PRIMARY KEY,
+    EmployeeName VARCHAR(100) NOT NULL,
+    Salary DECIMAL(10, 2) NOT NULL,
+    PhoneNumber VARCHAR(15) NOT NULL,
+    DepartmentID INT,
+    City VARCHAR(50),
+    FOREIGN KEY (DepartmentID) REFERENCES Departments(ID)
+);
+Q3)
+INSERT INTO Departments (DepartmentName) VALUES
+('HR'),
+( 'IT'),
+( 'Finance'),
+( 'Marketing'),
+( 'Operations');
+INSERT INTO Employees (EmployeeName, Salary, PhoneNumber, DepartmentID, City) VALUES
+('John Doe', 5000.00, '1234567890', 1, 'Amman'),
+('Jane Smith', 7000.50, '9876543210', 2, 'Zarqa'),
+('Ali Ahmad', 4500.75, '0791234567', 3, 'Irbid'),
+('Sara Hussein', 8000.00, '0779876543', 4, 'Aqaba'),
+('Omar Khalid', 6200.20, '0781239874', 5, 'Madaba');
+
+Q4)
+1. SELECT * FROM Employees;
+2.SELECT * FROM Employees
+ORDER BY Salary DESC;
+3.SELECT * FROM Employees 
+ORDER BY Salary DESC
+LIMIT 1;
+4.SELECT * FROM Employees 
+LIMIT 1;
+5.SELECT COUNT(*) AS TatalEmployees FROM Employees;
+6.SELECT * FROM Employees
+WHERE Salary = 5000;
+7.SELECT * FROM Employees
+WHERE Salary > 5000;
+8.SELECT * FROM Employees
+WHERE Salary > 500 && City = 'Amman';
+9.SELECT SUM(Salary) AS TotalSalaries FROM Employees;
+10.SELECT * FROM Employees
+WHERE EmployeeName LIKE 'A%';
+11.SELECT * FROM Employees
+WHERE EmployeeName LIKE '%d';
+12.SELECT * FROM Employees
+WHERE City = 'Salt' OR City = 'Amman' OR City = 'Aqaba';
+13.SELECT * FROM Employees
+WHERE Salary > 300 && Salary <6000;
+14.UPDATE Employees
+SET Salary = 6000.00
+WHERE ID = 1;
+15.SELECT DISTINCT City FROM Employees;
+16.SELECT City, COUNT(*) AS NumberOfEmployees
+FROM Employees
+GROUP BY City;
+17.SELECT Employees.EmployeeName, Employees.Salary, Employees.City, Departments.DepartmentName
+FROM Employees
+JOIN Departments ON Employees.DepartmentID = Departments.ID;

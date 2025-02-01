@@ -1,0 +1,93 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content {
+    padding: 20px;
+    background: #ffffff;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.container-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #E0ABA0;
+}
+
+.container-header h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.form-container {
+    padding: 20px;
+    background: #f8f9fa;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background-color: #5a6268;
+}
+
+.add-btn {
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #E0AB88;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+
+.add-btn:hover {
+    background-color: #E0AC88;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 5px;
+}

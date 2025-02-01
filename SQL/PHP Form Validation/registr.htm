@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrations</title>
+    <link rel="stylesheet" href="css/styleRegistraion.css">
+</head>
+<body>
+    <form id="submitRegister" action="process.php" method="post" >
+        <label for="name">Enter your Full name:</label>
+        <input type="text" id="name" name="name" required>
+        <p id="errName">Example: John Doe (No numbers allowed)</p>  
+        <br>
+        <label for="phone">Enter your phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <p id="errphone">Example: (078)/(079)/(077)</p>  
+        <br>
+        <label for="email">Enter your Email:</label>
+        <input type="email" id="email" name="email" required>
+        <p id="errEmail">Example: example@example.com (Valid format required)</p>
+        <br>
+        <label for="password">Enter your password:</label>
+        <input type="password" id="password" name="password" required>
+        <p id="errPassword">Example: Password123! (8-14 characters, including letters, numbers, and special characters)</p>  
+        <br>
+        <label for="confirmPassword">Enter Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <p id="errConfirmPassword">Example: Password123! (Must match the password above)</p>  
+        <br>
+        <input class="but" type="submit" name="submitRegister" value="Submit" onclick="validateRegister(event)">
+        <div class="link">
+            <p class="error-message">Already have an account ?<a class="login-button" href="login.html" >Login</a></p>  
+        </div>
+    </form> 
+    
+    <script src="Script/Script.js"></script>
+    <script>
+         document.getElementById("password").addEventListener("keydown", function(event) {
+        if (event.key === " ") {
+            event.preventDefault(); 
+        }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleLogin.css">
+    <title>Login Page</title>
+</head>
+<body>
+    <form id="loginForm" action="process.php" method="post" onsubmit="return validateLogin(event)">
+        
+        <label for="email">Enter your Email:</label>
+        <input type="email" id="emailLogin" name="email" required>
+        <p id="errEmailLogin">Ex: example@example.com</p>  
+        <br>
+        <label for="password">Enter your password:</label>
+        <input type="password" id="passwordLogin" name="password" required>
+        <p id="errPasswordLogin">Ex: Password123! </p>  
+        <br>
+        
+        <input class="but" type="submit" name="submitLogin" value="Submit" >
+        <p class="error-message">Dont have an account ?<a class="login-button" href="registr.htm" >Create Account</a></p>
+    </form> 
+    <script src="Script/Script.js"></script>
+    <script>
+         document.getElementById("passwordLogin").addEventListener("keydown", function(event) {
+        if (event.key === " ") {
+            event.preventDefault(); 
+        }
+    });
+    </script>
+</body>
+</html>

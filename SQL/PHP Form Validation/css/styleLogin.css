@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+p {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+}
+
+#errName, #errEmail, #errPassword, #errConfirmPassword {
+    font-size: 10px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+br {
+    margin-top: 10px;
+}

@@ -20,15 +20,13 @@ let info =  {
     });
     
     if (checkName.value === "" || !isNaN(checkName.value)) {
-        errNAme.textContent = "Please Enter The Full Name"
+        errNAme.textContent = "Please Enter The  Name"
         errNAme.style.color = "red"
         return;
     }
     else {
          errNAme.textContent = "Accepted"
          errNAme.style.color = "green"
-          checkName.value
-       
     }
     
     let phone = document.getElementById("Mobile").value.replace(/\s+/g, '');

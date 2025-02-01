@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REJX</title>
+    <script>
+
+ /* let st = "hello osama. Your name is Osama";
+let regex = /Osama/;
+console.log(st.match(regex));  */
+
+/* 
+let text = "I am Ahmad ";
+let regex = /ahmad/i;
+let newText = text.replace(regex, "Osama");
+console.log(newText);
+ */
+
+// //Modifiers
+
+// //i => case-insensitive
+
+// let regex2 = /Osama/i;
+
+// console.log(st.match(regex2));
+
+// // g => global (check the whole var and return every element matches)
+
+// let regex3 = /Osama/gi;
+
+// console.log(st.match(regex3));
+
+// console.log("**********Ranges**********");
+
+// // Ranges
+
+let range = "12345678910";
+ let rangeRe = /[1-9]/g;
+let regex = /\d{2}/g;
+//ex1
+console.log("Including every number : " + range.match(rangeRe)); //from 1-9
+
+// //ex2
+// console.log("Including nums : " + range.match(regex));
+
+// //ex3
+/* 
+let range2Re = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.(com|net)\b/g;
+ let arr = "O@gmail.com sy@yahoo.net madi@sc.ds";
+console.log(arr.match(range2Re)); //only ends with com OR net
+ */
+   //ex 4
+
+//let practiceRe = /\d+/g;
+// let practice = "Os1 Os1Os Os2 Os8 Os8Os";
+// console.log(practice.match(practiceRe));
+/* 
+let text = "This is   an example   text with  extra spaces.";
+let noSpaces = text.replace(/\s+/g, '');
+console.log(noSpaces); 
+ */
+
+/*  function validatePhoneNumber(phone) {
+    let phoneRegex = /^077\d{7}$/;
+    return phoneRegex.test(phone);
+}
+
+console.log(validatePhoneNumber("0771234567")); 
+console.log(validatePhoneNumber("07712345"));  */ 
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
