@@ -1,0 +1,97 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .main-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  strong {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+  }
+  
+  a:hover {
+    color: #004d99;
+  }
+  
+  p strong {
+    font-size: 17px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  p:last-child {
+    margin-top: 20px;
+  }
+  
+  /* Specific Styling for Employee Details */
+  p strong {
+    color: #333;
+  }
+  
+  p {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  p:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    p {
+      font-size: 14px;
+    }
+  
+    a {
+      font-size: 14px;
+    }
+  }
+  

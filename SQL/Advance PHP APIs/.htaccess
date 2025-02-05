@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteBase /myweb/Advance%20PHP%20APIs/
+
+# إعادة كتابة URL لعرض الطلاب باستخدام GET
+RewriteRule ^students$ operationsForManaging2.php?method=GET [QSA,L]
+
+# إعادة كتابة URL لإضافة طالب جديد باستخدام POST
+RewriteRule ^students$ operationsForManaging2.php?method=POST [QSA,L]
+
+# إعادة كتابة URL لتحديث بيانات الطالب باستخدام PUT
+RewriteRule ^students/([0-9]+)$ operationsForManaging2.php?method=PUT&id=$1 [QSA,L]
+
+# إعادة كتابة URL لحذف طالب باستخدام DELETE
+RewriteRule ^students/([0-9]+)$ operationsForManaging2.php?method=DELETE&id=$1 [QSA,L]
+
+# تأكد من عدم وجود ملفات حقيقية أو مجلدات
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d

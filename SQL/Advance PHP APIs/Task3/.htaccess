@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /myweb/Task3/
+
+# إعادة كتابة الروابط للمسارات المختلفة بناءً على نوع الطلب
+RewriteRule ^api/teachers$ create_teacher.php [QSA,L]  # للـ POST
+RewriteRule ^api/teachers$ get_teachers.php [QSA,L]    # للـ GET
+
+# إعادة كتابة الروابط لطلب معلم بناءً على الـ ID
+RewriteRule ^api/teachers/([0-9]+)$ get_teachers.php?teacherId=$1 [QSA,L]
+
+# إعادة كتابة الروابط لإنشاء مادة
+RewriteRule ^api/subjects$ create_subject.php [QSA,L]
+
+# إعادة كتابة الروابط لإنشاء اختبار
+RewriteRule ^api/exams$ create_exam.php [QSA,L]
