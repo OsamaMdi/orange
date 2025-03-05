@@ -165,5 +165,34 @@
             document.getElementById('add-Admin-form').style.display = 'block';
         }
     </script>
+
 </body>
 </html>
+
+
+
+<!-- 
+
+<div class="row mt-5">
+    <div class="col text-center">
+        <div class="block-27">
+            <ul>
+                <?php if ($currentPage > 1): ?>
+                    <li><a href="?page=<?php echo $currentPage - 1; ?>">&lt;</a></li>
+                <?php else: ?>
+                    <li><span>&lt;</span></li>
+                <?php endif; ?>
+
+                <?php for ($i = 1; $i <= $totalPages; $i++): ?>
+                    <li class="<?php echo $i == $currentPage ? 'active' : ''; ?>"><a href="?page=<?php echo $i; ?>"><?php echo $i; ?></a></li>
+                <?php endfor; ?>
+
+                <?php if ($currentPage < $totalPages): ?>
+                    <li><a href="?page=<?php echo $currentPage + 1; ?>">&gt;</a></li>
+                <?php else: ?>
+                    <li><span>&gt;</span></li>
+                <?php endif; ?>
+            </ul>
+        </div>
+    </div>
+</div> -->

@@ -10,15 +10,33 @@
 </body>
 </html>
 <?php
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+$id = $_GET['id'];
+$previousPage = $_SERVER['HTTP_REFERER'] ?? 'update.php';
+}
+
 require 'config.php';
 
-$id = $_GET['id'];
+$errors = [];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if(isset($_POST['tableName'])){
+        $tableName = $_POST['tableName'];
+    }else{
+        $errors['error'] = "* The Table Name Not Funde";  //  Error Massege
+                    echo '<div class="error-container">';
+                    echo '<h1>Error</h1>';
+                        echo "<p><span>•</span> $errors</p>"; 
+                echo '<a href="javascript:history.back()" class="back-btn">Go Back</a>';
+                    echo '</div>';
+                    exit();
+        }
+
     $name = trim($_POST['name']);
+
     $phone = trim($_POST['phone']);
 
-    $errors = [];
 
     if (empty($name)) {
         $errors['name'] = "* Please enter your name.";
